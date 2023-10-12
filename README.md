@@ -53,8 +53,6 @@ To get a local copy of the TaskLink API up and running, follow the steps below.
 - **PUT /update-task/:taskId**: Update a task's details.
 - **DELETE /delete-task/:taskId**: Delete a task.
 
-## TaskLink Website
-
 ## TaskLink Repository
 
 The source code for the TaskLink website is available in repository :[TaskLink GitHub Repository](https://github.com/guifelippe/TaskLink). 
