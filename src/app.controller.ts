@@ -6,11 +6,14 @@ import {
   Body,
   Put,
   Delete,
+  Res,
+  HttpStatus
 } from '@nestjs/common';
 import { AppService } from './app.service';
 import { UserService } from './user/user.service';
 import { TaskService } from './task/task.service';
 import { User as UserModel, Task as TaskModel, User } from '@prisma/client';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
@@ -25,12 +28,19 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('/get-user')
+  @Post('/login')
   async getUser(
     @Body('email') email: string,
     @Body('password') password: string,
-  ): Promise<UserModel>{
-    return this.userService.user(email, password)
+    @Res() res: Response
+  ) {
+    const user = await this.userService.user(email, password);
+
+    if (user) {
+      return res.status(HttpStatus.OK).json(user);
+    } else {
+      return res.status(HttpStatus.UNAUTHORIZED).json({ message: 'Authentication failed' });
+    }
   }
 
   @Get('/get-users')

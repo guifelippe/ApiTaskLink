@@ -7,18 +7,14 @@ export class UserService {
   constructor(private prisma: PrismaService) {}
 
   async user(email: string, password: string): Promise<User>{
-    const user = await this.prisma.user.findUnique({
+    const user = await this.prisma.user.findFirst({
         where:{
             email,
         }
     });
 
-    if(user)
-    {
-        if(user.password === password)
-        {
-            return user;
-        }
+    if (user && user.password === password) {
+      return user;
     }
 
     return null;
