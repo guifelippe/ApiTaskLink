@@ -1,3 +1,7 @@
+# API TaskLink
+
+The TaskLink API provides backend services for the TaskLink task management application. It handles user registration, task creation, updating, listing, and deletion.
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
@@ -5,69 +9,52 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Technologies
 
-## Description
+- [Node.js](https://nodejs.org/): A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [Express.js](https://expressjs.com/): A web application framework for Node.js.
+- [Nest.js](https://nestjs.com/): A progressive Node.js framework for building efficient, reliable, and scalable server-side applications.
+- [Prisma](https://www.prisma.io/): A modern database toolkit for Node.js and TypeScript.
+- [PostgreSQL](https://www.postgresql.org/): An open-source relational database management system.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Getting Started
 
-## Installation
+To get a local copy of the TaskLink API up and running, follow the steps below.
 
-```bash
-$ npm install
-```
+### Installation 
 
-## Running the app
+1. Clone the repository:
 
-```bash
-# development
-$ npm run start
+   ```bash
+   git clone https://github.com/guifelippe/ApiTaskLink.git
+  
+2. Change your current directory to the project folder:
 
-# watch mode
-$ npm run start:dev
+  ```bash
+  cd ApiTaskLink
 
-# production mode
-$ npm run start:prod
-```
+3. Create a .env file in the root directory and configure your environment variables, including the database connection details and any other relevant settings.
 
-## Test
+### Usage
 
-```bash
-# unit tests
-$ npm run test
+1. Start the development server:
 
-# e2e tests
-$ npm run test:e2e
+  ```bash
+  npm run start
 
-# test coverage
-$ npm run test:cov
-```
+2. The API server will be running at http://localhost:3000.
 
-## Support
+## API Endpoints 
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- **POST /create-user**: Register a new user.
+- **POST /login**: Signin.
+- **POST /create-task**: Create a new task.
+- **GET /get-tasks/:userId**: Retrieve all tasks for a user.
+- **PUT /update-task/:taskId**: Update a task's details.
+- **DELETE /delete-task/:taskId**: Delete a task.
 
-## Stay in touch
+## TaskLink Website
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## TaskLink Repository
 
-## License
-
-Nest is [MIT licensed](LICENSE).
+The source code for the TaskLink website is available in repository :[TaskLink GitHub Repository](https://github.com/guifelippe/TaskLink). 
