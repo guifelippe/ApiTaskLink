@@ -30,8 +30,8 @@ To get a local copy of the TaskLink API up and running, follow the steps below.
   
 2. Change your current directory to the project folder:
 
-  ```bash
-  cd ApiTaskLink
+    ```bash
+    cd ApiTaskLink
 
 3. Create a .env file in the root directory and configure your environment variables, including the database connection details and any other relevant settings.
 
@@ -39,8 +39,8 @@ To get a local copy of the TaskLink API up and running, follow the steps below.
 
 1. Start the development server:
 
-  ```bash
-  npm run start
+    ```bash
+    npm run start
 
 2. The API server will be running at http://localhost:3000.
 
